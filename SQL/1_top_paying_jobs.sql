@@ -13,7 +13,7 @@ SELECT
     job_schedule_type,
     job_location,
     job_posted_date::DATE,
-    ROUND(salary_year_avg, 0),
+    ROUND(salary_year_avg, 0) as salary_year_avg,
     companies.name as company_name
 FROM
     job_postings_fact AS jobs
@@ -55,7 +55,7 @@ Conclusion: High-paying analytics opportunities extend beyond traditional Data A
 "job_schedule_type": "Full-time",
 "job_location": "Anywhere",
 "job_posted_date": "2023-02-20",
-"round": "650000",
+"salary_year_avg": "650000",
 "company_name": "Mantys"
 },
 {
@@ -64,7 +64,7 @@ Conclusion: High-paying analytics opportunities extend beyond traditional Data A
 "job_schedule_type": "Full-time",
 "job_location": "Anywhere",
 "job_posted_date": "2023-08-23",
-"round": "336500",
+"salary_year_avg": "336500",
 "company_name": "Meta"
 },
 {
@@ -73,7 +73,7 @@ Conclusion: High-paying analytics opportunities extend beyond traditional Data A
 "job_schedule_type": "Full-time",
 "job_location": "Anywhere",
 "job_posted_date": "2023-06-18",
-"round": "255830",
+"salary_year_avg": "255830",
 "company_name": "AT&T"
 },
 {
@@ -82,7 +82,7 @@ Conclusion: High-paying analytics opportunities extend beyond traditional Data A
 "job_schedule_type": "Full-time",
 "job_location": "Anywhere",
 "job_posted_date": "2023-12-05",
-"round": "232423",
+"salary_year_avg": "232423",
 "company_name": "Pinterest Job Advertisements"
 },
 {
@@ -91,7 +91,7 @@ Conclusion: High-paying analytics opportunities extend beyond traditional Data A
 "job_schedule_type": "Full-time",
 "job_location": "Anywhere",
 "job_posted_date": "2023-01-17",
-"round": "217000",
+"salary_year_avg": "217000",
 "company_name": "Uclahealthcareers"
 },
 {
@@ -100,7 +100,7 @@ Conclusion: High-paying analytics opportunities extend beyond traditional Data A
 "job_schedule_type": "Full-time",
 "job_location": "Anywhere",
 "job_posted_date": "2023-08-09",
-"round": "205000",
+"salary_year_avg": "205000",
 "company_name": "SmartAsset"
 },
 {
@@ -109,7 +109,7 @@ Conclusion: High-paying analytics opportunities extend beyond traditional Data A
 "job_schedule_type": "Full-time",
 "job_location": "Anywhere",
 "job_posted_date": "2023-12-07",
-"round": "189309",
+"salary_year_avg": "189309",
 "company_name": "Inclusively"
 },
 {
@@ -118,7 +118,7 @@ Conclusion: High-paying analytics opportunities extend beyond traditional Data A
 "job_schedule_type": "Full-time",
 "job_location": "Anywhere",
 "job_posted_date": "2023-01-05",
-"round": "189000",
+"salary_year_avg": "189000",
 "company_name": "Motional"
 },
 {
@@ -127,7 +127,7 @@ Conclusion: High-paying analytics opportunities extend beyond traditional Data A
 "job_schedule_type": "Full-time",
 "job_location": "Anywhere",
 "job_posted_date": "2023-07-11",
-"round": "186000",
+"salary_year_avg": "186000",
 "company_name": "SmartAsset"
 },
 {
@@ -136,9 +136,8 @@ Conclusion: High-paying analytics opportunities extend beyond traditional Data A
 "job_schedule_type": "Full-time",
 "job_location": "Anywhere",
 "job_posted_date": "2023-06-09",
-"round": "184000",
+"salary_year_avg": "184000",
 "company_name": "Get It Recruit - Information Technology"
 }
 ]
-
  */
