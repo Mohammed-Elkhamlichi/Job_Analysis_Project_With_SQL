@@ -31,9 +31,9 @@ WHERE
     -- Descending Order by yearly salary 
 ORDER BY
     salary_year_avg DESC
--- display only 10 results
+    -- display only 10 results
 LIMIT
-    10
+    10;
 
 /*
 
@@ -49,96 +49,96 @@ This analysis highlights the 10 highest-paying full-time remote data analyst-rel
 
 Conclusion: High-paying analytics opportunities extend beyond traditional Data Analyst positions into principal, director, and specialized analytics roles. However, the $650,000 listing is an outlier and should be verified, and the salary figures should be checked to confirm whether they represent annual base salary or total compensation.
 [
-  {
-    "job_id": 226942,
-    "job_title": "Data Analyst",
-    "job_schedule_type": "Full-time",
-    "job_location": "Anywhere",
-    "job_posted_date": "2023-02-20",
-    "round": "650000",
-    "company_name": "Mantys"
-  },
-  {
-    "job_id": 547382,
-    "job_title": "Director of Analytics",
-    "job_schedule_type": "Full-time",
-    "job_location": "Anywhere",
-    "job_posted_date": "2023-08-23",
-    "round": "336500",
-    "company_name": "Meta"
-  },
-  {
-    "job_id": 552322,
-    "job_title": "Associate Director- Data Insights",
-    "job_schedule_type": "Full-time",
-    "job_location": "Anywhere",
-    "job_posted_date": "2023-06-18",
-    "round": "255830",
-    "company_name": "AT&T"
-  },
-  {
-    "job_id": 99305,
-    "job_title": "Data Analyst, Marketing",
-    "job_schedule_type": "Full-time",
-    "job_location": "Anywhere",
-    "job_posted_date": "2023-12-05",
-    "round": "232423",
-    "company_name": "Pinterest Job Advertisements"
-  },
-  {
-    "job_id": 1021647,
-    "job_title": "Data Analyst (Hybrid/Remote)",
-    "job_schedule_type": "Full-time",
-    "job_location": "Anywhere",
-    "job_posted_date": "2023-01-17",
-    "round": "217000",
-    "company_name": "Uclahealthcareers"
-  },
-  {
-    "job_id": 168310,
-    "job_title": "Principal Data Analyst (Remote)",
-    "job_schedule_type": "Full-time",
-    "job_location": "Anywhere",
-    "job_posted_date": "2023-08-09",
-    "round": "205000",
-    "company_name": "SmartAsset"
-  },
-  {
-    "job_id": 731368,
-    "job_title": "Director, Data Analyst - HYBRID",
-    "job_schedule_type": "Full-time",
-    "job_location": "Anywhere",
-    "job_posted_date": "2023-12-07",
-    "round": "189309",
-    "company_name": "Inclusively"
-  },
-  {
-    "job_id": 310660,
-    "job_title": "Principal Data Analyst, AV Performance Analysis",
-    "job_schedule_type": "Full-time",
-    "job_location": "Anywhere",
-    "job_posted_date": "2023-01-05",
-    "round": "189000",
-    "company_name": "Motional"
-  },
-  {
-    "job_id": 1749593,
-    "job_title": "Principal Data Analyst",
-    "job_schedule_type": "Full-time",
-    "job_location": "Anywhere",
-    "job_posted_date": "2023-07-11",
-    "round": "186000",
-    "company_name": "SmartAsset"
-  },
-  {
-    "job_id": 387860,
-    "job_title": "ERM Data Analyst",
-    "job_schedule_type": "Full-time",
-    "job_location": "Anywhere",
-    "job_posted_date": "2023-06-09",
-    "round": "184000",
-    "company_name": "Get It Recruit - Information Technology"
-  }
+{
+"job_id": 226942,
+"job_title": "Data Analyst",
+"job_schedule_type": "Full-time",
+"job_location": "Anywhere",
+"job_posted_date": "2023-02-20",
+"round": "650000",
+"company_name": "Mantys"
+},
+{
+"job_id": 547382,
+"job_title": "Director of Analytics",
+"job_schedule_type": "Full-time",
+"job_location": "Anywhere",
+"job_posted_date": "2023-08-23",
+"round": "336500",
+"company_name": "Meta"
+},
+{
+"job_id": 552322,
+"job_title": "Associate Director- Data Insights",
+"job_schedule_type": "Full-time",
+"job_location": "Anywhere",
+"job_posted_date": "2023-06-18",
+"round": "255830",
+"company_name": "AT&T"
+},
+{
+"job_id": 99305,
+"job_title": "Data Analyst, Marketing",
+"job_schedule_type": "Full-time",
+"job_location": "Anywhere",
+"job_posted_date": "2023-12-05",
+"round": "232423",
+"company_name": "Pinterest Job Advertisements"
+},
+{
+"job_id": 1021647,
+"job_title": "Data Analyst (Hybrid/Remote)",
+"job_schedule_type": "Full-time",
+"job_location": "Anywhere",
+"job_posted_date": "2023-01-17",
+"round": "217000",
+"company_name": "Uclahealthcareers"
+},
+{
+"job_id": 168310,
+"job_title": "Principal Data Analyst (Remote)",
+"job_schedule_type": "Full-time",
+"job_location": "Anywhere",
+"job_posted_date": "2023-08-09",
+"round": "205000",
+"company_name": "SmartAsset"
+},
+{
+"job_id": 731368,
+"job_title": "Director, Data Analyst - HYBRID",
+"job_schedule_type": "Full-time",
+"job_location": "Anywhere",
+"job_posted_date": "2023-12-07",
+"round": "189309",
+"company_name": "Inclusively"
+},
+{
+"job_id": 310660,
+"job_title": "Principal Data Analyst, AV Performance Analysis",
+"job_schedule_type": "Full-time",
+"job_location": "Anywhere",
+"job_posted_date": "2023-01-05",
+"round": "189000",
+"company_name": "Motional"
+},
+{
+"job_id": 1749593,
+"job_title": "Principal Data Analyst",
+"job_schedule_type": "Full-time",
+"job_location": "Anywhere",
+"job_posted_date": "2023-07-11",
+"round": "186000",
+"company_name": "SmartAsset"
+},
+{
+"job_id": 387860,
+"job_title": "ERM Data Analyst",
+"job_schedule_type": "Full-time",
+"job_location": "Anywhere",
+"job_posted_date": "2023-06-09",
+"round": "184000",
+"company_name": "Get It Recruit - Information Technology"
+}
 ]
 
-*/
+ */
