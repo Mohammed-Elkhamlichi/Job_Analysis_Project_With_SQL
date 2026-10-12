@@ -8,10 +8,12 @@ providing insights into the most valuable skills for job seekers.
  */
 SELECT
     skills.skills,
-    count(skills_job_dim.job_id) AS skills_demand
+    count(skills_job_dim.job_id) AS skill_demand
 FROM
     job_postings_fact AS j
+    -- Inner join between skills_job_dim and job_postings_fact table using the job_id
     INNER JOIN skills_job_dim ON skills_job_dim.job_id = j.job_id
+    -- Inner join between skills_dim and skills_job_dim table using the skill_id
     INNER JOIN skills_dim AS skills ON skills.skill_id = skills_job_dim.skill_id
 WHERE
     j.job_title_short = 'Data Analyst'
@@ -21,13 +23,32 @@ WHERE
 GROUP BY
     skills
 ORDER BY
-    skills_demand DESC
+    skill_demand DESC
 LIMIT
     5;
 
-select
-    *
-from
-    job_postings_fact
-LIMIT
-    10
+/*
+RESULT of to 5 in-demand skills for Data analyst
+[
+{
+"skills": "sql", 
+"skill_demand": "92628"
+},
+{
+"skills": "excel",
+"skill_demand": "67031"
+},
+{
+"skills": "python",
+"skill_demand": "57326"
+},
+{
+"skills": "tableau",
+"skill_demand": "46554"
+},
+{
+"skills": "power bi",
+"skill_demand": "39468"
+}
+]
+ */
