@@ -49,6 +49,7 @@ ORDER BY
     salary_year_avg DESC;
 
 /*
+the result
 [
 {
 "job_id": 552322,
