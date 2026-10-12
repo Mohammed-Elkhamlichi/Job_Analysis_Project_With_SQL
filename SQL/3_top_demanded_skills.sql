@@ -15,10 +15,19 @@ FROM
     INNER JOIN skills_dim AS skills ON skills.skill_id = skills_job_dim.skill_id
 WHERE
     j.job_title_short = 'Data Analyst'
+    -- AND job_location LIKE '%Anywhere%'
+    -- AND job_posted_date BETWEEN '2023-01-01' AND '2023-09-30'
     -- j.job_title_short = 'Data Enginner'
 GROUP BY
     skills
 ORDER BY
     skills_demand DESC
 LIMIT
-    5
+    5;
+
+select
+    *
+from
+    job_postings_fact
+LIMIT
+    10
