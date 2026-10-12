@@ -1,37 +1,144 @@
 /*
 Question: What are the top-paying data analyst jobs?
-- Identify the top 10 highest-paying Data Analyst roles that are available remotely
-- Focuses on job postings with specified salaries (remove nulls)
-- BONUS: Include company names of top 10 roles
-- Why? Highlight the top-paying opportunities for Data Analysts, offering insights into employment options and location flexibility.
- */
-WITH
-    top_10_paying_jobs AS (
-        SELECT DISTINCT
-            job_title_short,
-            ROUND(AVG(salary_year_avg), 0) AS average_salary
-        FROM
-            job_postings_fact
-        WHERE
-            salary_year_avg IS NOT NULL
-            AND job_title_short NOT LIKE 'Senior%'
-            AND job_title_short NOT LIKE 'Junior%'
-        GROUP BY
-            job_title_short
-        ORDER BY
-            average_salary DESC
-        LIMIT
-            10
-    )
-SELECT
-    *
-FROM
-    top_10_paying_jobs;
 
+- Identify the top 10 highest-paying full-time Data Analyst roles available remotely.
+- Focus on job postings with specified salaries (exclude NULL salary values).
+- Rank roles by salary, from highest to lowest.
+- BONUS: Include company names, job titles, and locations for the top 10 roles.
+- Why? Identify the highest-paying remote opportunities for Data Analysts and understand the earning potential and location flexibility of each role.
+ */
 SELECT
-    *
+    job_id,
+    job_title,
+    job_schedule_type,
+    job_location,
+    job_posted_date::DATE,
+    ROUND(salary_year_avg, 0),
+    companies.name as company_name
 FROM
-    company_dim as c
-    RIGHT JOIN job_postings_fact as j on c.company_id = j.company_id
+    job_postings_fact AS jobs
+    -- left join with the company_dim table using the company_id
+    LEFT JOIN company_dim AS companies ON jobs.company_id = companies.company_id
+WHERE
+    -- DATA Analyst Role
+    job_title_short = 'Data Analyst'
+    -- Full Time Job
+    AND job_schedule_type = 'Full-time'
+    -- ignore the Null result
+    AND salary_year_avg IS NOT NULL
+    -- GET Remote Jobs
+    AND job_location = 'Anywhere'
+    -- Descending Order by yearly salary 
+ORDER BY
+    salary_year_avg DESC
+-- display only 10 results
 LIMIT
     10
+
+/*
+
+📊 Analysis: Top 10 Highest-Paying Remote Data Analyst Jobs
+
+This analysis highlights the 10 highest-paying full-time remote data analyst-related roles based on job postings with specified salary values.
+
+💡 Key Insights:
+- 💰 The highest listed salary is $650,000 for a Data Analyst role at Mantys.
+- 🏢 Meta and AT&T appear among the companies offering high-paying analytics leadership positions.
+- 📈 Principal and director-level roles feature prominently, suggesting that seniority and specialized expertise can significantly influence earning potential.
+- 🌍 All listed roles are marked as remote or “Anywhere,” offering potential location flexibility.
+
+Conclusion: High-paying analytics opportunities extend beyond traditional Data Analyst positions into principal, director, and specialized analytics roles. However, the $650,000 listing is an outlier and should be verified, and the salary figures should be checked to confirm whether they represent annual base salary or total compensation.
+[
+  {
+    "job_id": 226942,
+    "job_title": "Data Analyst",
+    "job_schedule_type": "Full-time",
+    "job_location": "Anywhere",
+    "job_posted_date": "2023-02-20",
+    "round": "650000",
+    "company_name": "Mantys"
+  },
+  {
+    "job_id": 547382,
+    "job_title": "Director of Analytics",
+    "job_schedule_type": "Full-time",
+    "job_location": "Anywhere",
+    "job_posted_date": "2023-08-23",
+    "round": "336500",
+    "company_name": "Meta"
+  },
+  {
+    "job_id": 552322,
+    "job_title": "Associate Director- Data Insights",
+    "job_schedule_type": "Full-time",
+    "job_location": "Anywhere",
+    "job_posted_date": "2023-06-18",
+    "round": "255830",
+    "company_name": "AT&T"
+  },
+  {
+    "job_id": 99305,
+    "job_title": "Data Analyst, Marketing",
+    "job_schedule_type": "Full-time",
+    "job_location": "Anywhere",
+    "job_posted_date": "2023-12-05",
+    "round": "232423",
+    "company_name": "Pinterest Job Advertisements"
+  },
+  {
+    "job_id": 1021647,
+    "job_title": "Data Analyst (Hybrid/Remote)",
+    "job_schedule_type": "Full-time",
+    "job_location": "Anywhere",
+    "job_posted_date": "2023-01-17",
+    "round": "217000",
+    "company_name": "Uclahealthcareers"
+  },
+  {
+    "job_id": 168310,
+    "job_title": "Principal Data Analyst (Remote)",
+    "job_schedule_type": "Full-time",
+    "job_location": "Anywhere",
+    "job_posted_date": "2023-08-09",
+    "round": "205000",
+    "company_name": "SmartAsset"
+  },
+  {
+    "job_id": 731368,
+    "job_title": "Director, Data Analyst - HYBRID",
+    "job_schedule_type": "Full-time",
+    "job_location": "Anywhere",
+    "job_posted_date": "2023-12-07",
+    "round": "189309",
+    "company_name": "Inclusively"
+  },
+  {
+    "job_id": 310660,
+    "job_title": "Principal Data Analyst, AV Performance Analysis",
+    "job_schedule_type": "Full-time",
+    "job_location": "Anywhere",
+    "job_posted_date": "2023-01-05",
+    "round": "189000",
+    "company_name": "Motional"
+  },
+  {
+    "job_id": 1749593,
+    "job_title": "Principal Data Analyst",
+    "job_schedule_type": "Full-time",
+    "job_location": "Anywhere",
+    "job_posted_date": "2023-07-11",
+    "round": "186000",
+    "company_name": "SmartAsset"
+  },
+  {
+    "job_id": 387860,
+    "job_title": "ERM Data Analyst",
+    "job_schedule_type": "Full-time",
+    "job_location": "Anywhere",
+    "job_posted_date": "2023-06-09",
+    "round": "184000",
+    "company_name": "Get It Recruit - Information Technology"
+  }
+]
+
+*/
