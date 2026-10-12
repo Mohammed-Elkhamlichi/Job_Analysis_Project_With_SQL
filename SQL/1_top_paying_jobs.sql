@@ -18,7 +18,7 @@ SELECT
 FROM
     job_postings_fact AS jobs
     -- left join with the company_dim table using the company_id
-    LEFT JOIN company_dim AS companies ON jobs.company_id = companies.company_id
+    INNER JOIN company_dim AS companies ON jobs.company_id = companies.company_id
 WHERE
     -- DATA Analyst Role
     job_title_short = 'Data Analyst'
