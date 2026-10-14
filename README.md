@@ -37,7 +37,7 @@ This project uses SQL to explore the data analyst job market and answer key ques
 
 ### Questions Explored
 
-1. **Top-Paying Data Analyst Jobs:** Identify the highest-paying data analyst positions, focusing on full-time, remote opportunities with disclosed salaries.
+#### 1. **Top-Paying Data Analyst Jobs:** Identify the highest-paying data analyst positions, focusing on full-time, remote opportunities with disclosed salaries.
 
 #### **SQL QUERY**
 
@@ -170,7 +170,7 @@ LIMIT
 ]
 ```
 
-2. **Skills Required for Top-Paying Jobs:** Analyze the skills associated with the highest-paying data analyst positions.
+#### 2. **Skills Required for Top-Paying Jobs:** Analyze the skills associated with the highest-paying data analyst positions.
 
 #### **SQL QUERY**
 
@@ -889,7 +889,7 @@ ORDER BY
 ]
 ```
 
-3. **Most In-Demand Skills:** Identify the skills most frequently requested by employers in data analyst job postings.
+#### 3. **Most In-Demand Skills:** Identify the skills most frequently requested by employers in data analyst job postings.
 
 #### **SQL QUERY**
 
@@ -945,7 +945,7 @@ LIMIT
 ]
 ```
 
-4. **Skills Associated with Higher Salaries:** Explore the relationship between specific skills and average data analyst salaries.
+#### 4. **Skills Associated with Higher Salaries:** Explore the relationship between specific skills and average data analyst salaries.
 
 #### **SQL QUERY**
 
@@ -1023,7 +1023,7 @@ LIMIT
 ]
 ```
 
-5. **Optimal Skills to Learn:** Identify skills that combine strong employer demand with competitive salaries.
+#### 5. **Optimal Skills to Learn:** Identify skills that combine strong employer demand with competitive salaries.
 
 #### **SQL QUERY**
 
