@@ -26,8 +26,9 @@ WHERE
 GROUP BY
     skills.skill_id
 HAVING
-    COUNT(skills_job_dim.job_id) > 20
+    COUNT(skills_job_dim.job_id) > 10
 ORDER BY
+    -- avg_salary DESC,
     skills_demand DESC
 LIMIT
     10;
