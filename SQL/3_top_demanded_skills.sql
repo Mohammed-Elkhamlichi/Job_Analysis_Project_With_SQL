@@ -28,6 +28,19 @@ LIMIT
     5;
 
 /*
+SQL Rules the Job Market:
+
+With 92,628 job postings, SQL is significantly ahead of all other skills. This emphasizes that database querying and data retrieval are core prerequisites for any professional entering the data analyst job market.
+
+Traditional Tools vs. Programming:
+
+Excel still holds a commanding second place (67,031 postings), proving that spreadsheets are far from obsolete in daily business tasks. However, programming languages like Python (57,326) are closing the gap as organizations demand deeper automation and scalable data processing.
+
+Visualization Battle (Tableau vs. Power BI):
+
+Both major dashboarding tools appear prominently in the top 5, with Tableau leading slightly in volume within this dataset, demonstrating that communicating insights visually to stakeholders is just as crucial as extracting the data.
+
+
 RESULT of to 5 in-demand skills for Data analyst
 [
 {
