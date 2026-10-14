@@ -39,7 +39,7 @@ This project uses SQL to explore the data analyst job market and answer key ques
 
 1. **Top-Paying Data Analyst Jobs:** Identify the highest-paying data analyst positions, focusing on full-time, remote opportunities with disclosed salaries.
 
-#### **SQL QUERY**:
+#### **SQL QUERY**
 
 ```sql
 SELECT
@@ -71,7 +71,7 @@ LIMIT
     10;
 ```
 
-#### **THE RESULT**:
+#### **THE RESULT**
 
 !['Top 10 Paying Data Analyst Jobs'](./assets/1_top_paying_jobs.png)
 
@@ -171,9 +171,299 @@ LIMIT
 ```
 
 2. **Skills Required for Top-Paying Jobs:** Analyze the skills associated with the highest-paying data analyst positions.
+
+#### **SQL QUERY**
+
+```SQL
+WITH
+    top_paying_data_jobs AS (
+        SELECT
+            job_id,
+            job_title,
+            job_schedule_type,
+            job_location,
+            ROUND(salary_year_avg, 0) as salary_year_avg,
+            companies.name as company_name
+        FROM
+            job_postings_fact AS jobs
+            -- left join with the company_dim table using the company_id
+            LEFT JOIN company_dim AS companies ON jobs.company_id = companies.company_id
+        WHERE
+            -- DATA Analyst Role
+            job_title_short = 'Data Analyst'
+            -- Full Time Job
+            AND job_schedule_type = 'Full-time'
+            -- ignore the Null result
+            AND salary_year_avg IS NOT NULL
+            -- GET Remote Jobs
+            AND job_location = 'Anywhere'
+            -- Descending Order by yearly salary
+        ORDER BY
+            salary_year_avg DESC
+            -- display only 10 results
+        LIMIT
+            10
+    )
+SELECT
+    top_paying_data_jobs.*,
+    skills_job_dim.skill_id,
+    skills_dim.skills
+FROM
+    top_paying_data_jobs
+    -- Inner join between skills_job_dim and job_postings_fact table using the job_id
+    INNER JOIN skills_job_dim ON top_paying_data_jobs.job_id = skills_job_dim.job_id
+    -- Inner join between skills_dim and skills_job_dim table using the skill_id
+    INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+    -- order by yearly salary
+ORDER BY
+    salary_year_avg DESC;
+
+```
+
+#### **THE RESULT**
+
+![](./assets/2_top_paying_job_skills.png)
+
+```JSON
+
+```
+
 3. **Most In-Demand Skills:** Identify the skills most frequently requested by employers in data analyst job postings.
+
+#### **SQL QUERY**
+
+```SQL
+SELECT
+    skills.skills,
+    count(skills_job_dim.job_id) AS skill_demand
+FROM
+    job_postings_fact AS j
+    -- Inner join between skills_job_dim and job_postings_fact table using the job_id
+    INNER JOIN skills_job_dim ON skills_job_dim.job_id = j.job_id
+    -- Inner join between skills_dim and skills_job_dim table using the skill_id
+    INNER JOIN skills_dim AS skills ON skills.skill_id = skills_job_dim.skill_id
+WHERE
+    j.job_title_short = 'Data Analyst'
+    -- AND job_location LIKE '%Anywhere%'
+    -- AND job_posted_date BETWEEN '2023-01-01' AND '2023-09-30'
+    -- j.job_title_short = 'Data Enginner'
+GROUP BY
+    skills
+ORDER BY
+    skill_demand DESC
+LIMIT
+    5;
+```
+
+#### **THE RESULT**
+
+![](./assets/3_top_demanded_skills.png)
+
+```JSON
+[
+{
+"skills": "sql",
+"skill_demand": "92628"
+},
+{
+"skills": "excel",
+"skill_demand": "67031"
+},
+{
+"skills": "python",
+"skill_demand": "57326"
+},
+{
+"skills": "tableau",
+"skill_demand": "46554"
+},
+{
+"skills": "power bi",
+"skill_demand": "39468"
+}
+]
+```
+
 4. **Skills Associated with Higher Salaries:** Explore the relationship between specific skills and average data analyst salaries.
+
+#### **SQL QUERY**
+
+```SQL
+SELECT
+    -- the averege salary
+    ROUND(AVG(j.salary_year_avg), 0) as avg_salary,
+    -- skills
+    skills.skills
+FROM
+    job_postings_fact as j
+    -- inner join between the job_postings_fact and skills_job_dim table using the job_id
+    INNER JOIN skills_job_dim ON j.job_id = skills_job_dim.job_id
+    -- inner join between the skills_job_dim and skills_dim table using the job_id
+    INNER JOIN skills_dim as skills ON skills.skill_id = skills_job_dim.skill_id
+WHERE
+    -- data analyst roles
+    job_title_short = 'Data Analyst'
+    -- salary is not NULL
+    AND j.salary_year_avg IS NOT NULL
+GROUP BY
+    skills.skills
+ORDER BY
+    avg_salary DESC
+LIMIT
+    10;
+```
+
+#### **THE RESULT**
+
+![](./assets/4_top_paying_skills.png)
+
+```JSON
+[
+{
+"avg_salary": "400000",
+"skills": "svn"
+},
+{
+"avg_salary": "179000",
+"skills": "solidity"
+},
+{
+"avg_salary": "160515",
+"skills": "couchbase"
+},
+{
+"avg_salary": "155486",
+"skills": "datarobot"
+},
+{
+"avg_salary": "155000",
+"skills": "golang"
+},
+{
+"avg_salary": "149000",
+"skills": "mxnet"
+},
+{
+"avg_salary": "147633",
+"skills": "dplyr"
+},
+{
+"avg_salary": "147500",
+"skills": "vmware"
+},
+{
+"avg_salary": "146734",
+"skills": "terraform"
+},
+{
+"avg_salary": "138500",
+"skills": "twilio"
+}
+]
+```
+
 5. **Optimal Skills to Learn:** Identify skills that combine strong employer demand with competitive salaries.
+
+#### **SQL QUERY**
+
+```SQL
+SELECT
+    skills.skill_id,
+    ROUND(AVG(j.salary_year_avg), 0) as avg_salary,
+    COUNT(skills_job_dim.job_id) as skills_demand,
+    skills.skills
+FROM
+    job_postings_fact as j
+    -- inner join between the job_postings_fact and skills_job_dim table using the job_id
+    INNER JOIN skills_job_dim ON j.job_id = skills_job_dim.job_id
+    -- inner join between the skills_job_dim and skills_dim table using the job_id
+    INNER JOIN skills_dim as skills ON skills.skill_id = skills_job_dim.skill_id
+WHERE
+    -- Data Analyst roles
+    j.job_title_short = 'Data Analyst'
+    -- salary NOT NULL
+    AND j.salary_year_avg IS NOT NULL
+    -- work from home job
+    and j.job_work_from_home IS TRUE
+GROUP BY
+    skills.skill_id
+HAVING
+    COUNT(skills_job_dim.job_id) > 10
+ORDER BY
+    -- avg_salary DESC,
+    skills_demand DESC
+LIMIT
+    10;
+```
+
+#### **THE RESULT**
+
+![](./assets/5_optimal_skills.png)
+
+```JSON
+[
+{
+"skill_id": 0,
+"avg_salary": "97237",
+"skills_demand": "398",
+"skills": "sql"
+},
+{
+"skill_id": 181,
+"avg_salary": "87288",
+"skills_demand": "256",
+"skills": "excel"
+},
+{
+"skill_id": 1,
+"avg_salary": "101397",
+"skills_demand": "236",
+"skills": "python"
+},
+{
+"skill_id": 182,
+"avg_salary": "99288",
+"skills_demand": "230",
+"skills": "tableau"
+},
+{
+"skill_id": 5,
+"avg_salary": "100499",
+"skills_demand": "148",
+"skills": "r"
+},
+{
+"skill_id": 183,
+"avg_salary": "97431",
+"skills_demand": "110",
+"skills": "power bi"
+},
+{
+"skill_id": 186,
+"avg_salary": "98902",
+"skills_demand": "63",
+"skills": "sas"
+},
+{
+"skill_id": 7,
+"avg_salary": "98902",
+"skills_demand": "63",
+"skills": "sas"
+},
+{
+"skill_id": 196,
+"avg_salary": "88701",
+"skills_demand": "58",
+"skills": "powerpoint"
+},
+{
+"skill_id": 185,
+"avg_salary": "103795",
+"skills_demand": "49",
+"skills": "looker"
+}
+]
+```
 
 ### Tools & Techniques
 
