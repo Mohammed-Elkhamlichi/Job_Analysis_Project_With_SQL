@@ -26,4 +26,49 @@ GROUP BY
 ORDER BY
     avg_salary DESC
 LIMIT
-    10
+    10;
+
+/*
+[
+{
+"avg_salary": "400000",
+"skills": "svn"
+},
+{
+"avg_salary": "179000",
+"skills": "solidity"
+},
+{
+"avg_salary": "160515",
+"skills": "couchbase"
+},
+{
+"avg_salary": "155486",
+"skills": "datarobot"
+},
+{
+"avg_salary": "155000",
+"skills": "golang"
+},
+{
+"avg_salary": "149000",
+"skills": "mxnet"
+},
+{
+"avg_salary": "147633",
+"skills": "dplyr"
+},
+{
+"avg_salary": "147500",
+"skills": "vmware"
+},
+{
+"avg_salary": "146734",
+"skills": "terraform"
+},
+{
+"avg_salary": "138500",
+"skills": "twilio"
+}
+]
+ */
