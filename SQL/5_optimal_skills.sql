@@ -5,3 +5,32 @@ Answer: What are the most optimal skills to learn (aka it’s in high demand and
 - Why? Targets skills that offer job security (high demand) and financial benefits (high salaries), 
 offering strategic insights for career development in data analysis
  */
+SELECT
+    skills.skill_id,
+    ROUND(AVG(j.salary_year_avg), 0) as avg_salary,
+    COUNT(skills_job_dim.job_id) as skills_demand,
+    skills.skills
+FROM
+    job_postings_fact as j
+    -- inner join between the job_postings_fact and skills_job_dim table using the job_id
+    INNER JOIN skills_job_dim ON j.job_id = skills_job_dim.job_id
+    -- inner join between the skills_job_dim and skills_dim table using the job_id
+    INNER JOIN skills_dim as skills ON skills.skill_id = skills_job_dim.skill_id
+WHERE
+    -- data analyst roles
+    j.job_title_short = 'Data Analyst'
+    -- salary is not NULL
+    AND j.salary_year_avg IS NOT NULL
+    and j.job_work_from_home IS TRUE
+GROUP BY
+    skills.skill_id
+HAVING
+    COUNT(skills_job_dim.job_id) > 20
+ORDER BY
+    skills_demand DESC
+LIMIT
+    10;
+
+/*
+
+ */
