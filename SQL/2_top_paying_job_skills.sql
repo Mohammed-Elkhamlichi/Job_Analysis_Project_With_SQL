@@ -49,6 +49,15 @@ ORDER BY
     salary_year_avg DESC;
 
 /*
+1. Query Breakdown
+Common Table Expression (WITH top_paying_data_jobs AS (...)): First, the query isolates the top 10 highest-paying, full-time, remote Data Analyst roles across companies like AT&T ($255k), Pinterest ($232k), and UCLA Health ($217k).
+
+INNER JOIN skills_job_dim & skills_dim: Then, it maps those specific high-paying job IDs to all associated skills, returning a detailed mapping of every tool demanded by these elite positions.
+
+2. Strategic Takeaways for Job Seekers
+SQL & Python Rule the Top Tier: While Excel is great for general entry-level work, reaching six-figure executive and principal roles heavily depends on mastering SQL (80%) and Python (70%).
+
+Modern Cloud & BI Integration: Top-paying positions increasingly look for candidates familiar with cloud data warehouses like Snowflake, cloud platforms like Azure, and enterprise visualization suites like Tableau.
 the result
 [
 {

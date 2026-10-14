@@ -34,20 +34,17 @@ LIMIT
     10;
 
 /*
-📊 Executive Summary & Key Insights
-Highest Demand: SQL is by far the most in-demand skill with 398 job listings, followed by Excel (256) and Python (236).
+1. SQL Query Architecture Highlights
+Targeting Remote (j.job_work_from_home IS TRUE): Filters exclusively for remote job opportunities, offering insights tailored to work-from-home positions.
 
-Highest Earning Potential: Looker commands the highest average salary at $103,795, closely followed by Python ($101,397) and R ($100,499). All three break the $100k threshold.
+Filter Threshold (HAVING COUNT(...) > 10): Removes single-posting outliers (like svn), ensuring that all skills evaluated have consistent market validation across at least 11 remote postings.
 
-Salary vs. Demand Trade-off: Core database and spreadsheet tools (SQL, Excel) boast massive market demand with solid, competitive mid-to-high salaries, whereas specialized BI and programming tools (Looker, R, Python) offer premium salaries with more targeted or niche demand.
+Ordering by Demand (ORDER BY skills_demand DESC): Prioritizes job security and volume over pure salary, surfacing skills that are widely sought after by employers.
 
-Overall Metrics:
+2. Strategic Career Recommendations
+The Ideal Tech Stack: Pairing SQL + Python + Tableau creates a highly competitive profile for remote data analysts, combining high job opening volume with average salaries exceeding $99k–$101k.
 
-Average Salary Across All Skills: $97,170.89
-
-Median Salary: $98,902.00
-
-Salary Range: $87,288 (Excel) to $103,795 (Looker)
+High-Yield Specialization: Learning Looker ($103,795) alongside Python provides the highest earning potential while maintaining strong remote employability.
 
 [
 {

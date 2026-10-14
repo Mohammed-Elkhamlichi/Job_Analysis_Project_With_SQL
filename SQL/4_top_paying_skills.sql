@@ -29,6 +29,18 @@ LIMIT
     10;
 
 /*
+The SVN Outlier:
+
+SVN ($400,000) leads the list by a massive margin. In salary queries without a minimum job-count filter (HAVING COUNT), older or specialized legacy tools with very few job postings can heavily skew the average if tied to senior or executive-level positions.
+
+Premium on Engineering & Specialized Tech:
+
+Unlike basic reporting tools, the skills driving the highest salaries in this dataset blend data analytics with software engineering, blockchain (Solidity), and artificial intelligence (DataRobot, MXNet), showing that technical specialization significantly increases earning potential.
+
+Cloud and DevOps Integration:
+
+Tools like Golang, Terraform, and VMware consistently hover between $146k and $155k, highlighting that modern data analysts who understand cloud infrastructure and pipeline automation are highly valued by employers.
+
 [
 {
 "avg_salary": "400000",
