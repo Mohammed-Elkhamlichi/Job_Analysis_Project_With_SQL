@@ -34,6 +34,21 @@ LIMIT
     10;
 
 /*
+📊 Executive Summary & Key Insights
+Highest Demand: SQL is by far the most in-demand skill with 398 job listings, followed by Excel (256) and Python (236).
+
+Highest Earning Potential: Looker commands the highest average salary at $103,795, closely followed by Python ($101,397) and R ($100,499). All three break the $100k threshold.
+
+Salary vs. Demand Trade-off: Core database and spreadsheet tools (SQL, Excel) boast massive market demand with solid, competitive mid-to-high salaries, whereas specialized BI and programming tools (Looker, R, Python) offer premium salaries with more targeted or niche demand.
+
+Overall Metrics:
+
+Average Salary Across All Skills: $97,170.89
+
+Median Salary: $98,902.00
+
+Salary Range: $87,288 (Excel) to $103,795 (Looker)
+
 [
 {
 "skill_id": 0,
