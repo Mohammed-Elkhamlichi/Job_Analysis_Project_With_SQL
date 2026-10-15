@@ -77,21 +77,17 @@ LIMIT
 
 !['Top 10 Paying Data Analyst Jobs'](./images/1_top_paying_jobs.png)
 
-```
-
-Massive Outlier at the Peak:
-
-Mantys leads the ranking significantly at $650,000 for a standard "Data Analyst" title. In job market datasets, exceptionally high single-posting salaries for early or mid-tier titles can represent executive equity packages, high-end consulting contracts, or unique compensation reporting structures.
-
-Leadership & Senior Titles Command Top Dollar:
-
-Positions such as Director of Analytics (Meta at $336,500), Associate Director (AT&T at $255,830), and various Principal Data Analyst roles (SmartAsset, Motional ranging from $186k to $205k) clearly demonstrate that scaling up compensation requires stepping into leadership, architecture, or principal-level analytical responsibilities.
-
-Remote Flexibility at Elite Companies:
-
-Major industry players like Meta, AT&T, and Pinterest offer fully remote positions ("Anywhere") with salaries comfortably exceeding $230k, proving that remote workers can secure top-tier tech compensation without traditional office constraints.
-
-```
+> Massive Outlier at the Peak:
+>
+> Mantys leads the ranking significantly at $650,000 for a standard "Data Analyst" title. In job market datasets, exceptionally high single-posting salaries for early or mid-tier titles can represent executive equity packages, high-end consulting contracts, or unique compensation reporting structures.
+>
+> Leadership & Senior Titles Command Top Dollar:
+>
+> Positions such as Director of Analytics (Meta at $336,500), Associate Director (AT&T at $255,830), and various Principal Data Analyst roles (SmartAsset, Motional ranging from $186k to $205k) clearly demonstrate that scaling up compensation requires stepping into leadership, architecture, or principal-level analytical responsibilities.
+>
+> Remote Flexibility at Elite Companies:
+>
+> Major industry players like Meta, AT&T, and Pinterest offer fully remote positions ("Anywhere") with salaries comfortably exceeding $230k, proving that remote workers can secure top-tier tech compensation without traditional office constraints.
 
 #### **2. Skills Required for Top-Paying Jobs:** Analyze the skills associated with the highest-paying data analyst positions.
 
