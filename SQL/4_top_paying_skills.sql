@@ -23,6 +23,8 @@ WHERE
     AND j.salary_year_avg IS NOT NULL
 GROUP BY
     skills.skills
+HAVING
+    COUNT(DISTINCT j.job_id) >= 10
 ORDER BY
     avg_salary DESC
 LIMIT

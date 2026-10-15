@@ -1,42 +1,42 @@
 [
     {
-        "avg_salary": "400000",
-        "skills": "svn"
+        "avg_salary": "129999",
+        "skills": "kafka"
     },
     {
-        "avg_salary": "179000",
-        "skills": "solidity"
+        "avg_salary": "125226",
+        "skills": "pytorch"
     },
     {
-        "avg_salary": "160515",
-        "skills": "couchbase"
+        "avg_salary": "124686",
+        "skills": "perl"
     },
     {
-        "avg_salary": "155486",
-        "skills": "datarobot"
+        "avg_salary": "120647",
+        "skills": "tensorflow"
     },
     {
-        "avg_salary": "155000",
-        "skills": "golang"
+        "avg_salary": "118407",
+        "skills": "cassandra"
     },
     {
-        "avg_salary": "149000",
-        "skills": "mxnet"
+        "avg_salary": "117966",
+        "skills": "atlassian"
     },
     {
-        "avg_salary": "147633",
-        "skills": "dplyr"
+        "avg_salary": "116387",
+        "skills": "airflow"
     },
     {
-        "avg_salary": "147500",
-        "skills": "vmware"
+        "avg_salary": "115480",
+        "skills": "scala"
     },
     {
-        "avg_salary": "146734",
-        "skills": "terraform"
+        "avg_salary": "114883",
+        "skills": "linux"
     },
     {
-        "avg_salary": "138500",
-        "skills": "twilio"
+        "avg_salary": "114153",
+        "skills": "confluence"
     }
 ]
