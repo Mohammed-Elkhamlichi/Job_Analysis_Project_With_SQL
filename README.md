@@ -327,6 +327,35 @@ LIMIT
 - **Aggregate Functions:** Use `COUNT()`, `AVG()`, and other functions to summarize job-market trends.
 - **Window Functions:** Analyze and rank job opportunities and skill-related salary trends.
 
+&nbsp;
+
 # WHAT I LEARNED
 
-# CONCLUSIONS
+Through this project, I strengthened my SQL skills and gained a better understanding of how to analyze real-world job market data.
+
+- **Writing Complex SQL Queries:** Used filtering, sorting, grouping, and aggregate functions to answer specific business questions.
+- **Joining Multiple Tables:** Combined job postings, company information, and skill data to uncover relationships between salaries, job opportunities, and required skills.
+- **Using Common Table Expressions (CTEs):** Organized complex queries into smaller, more readable steps to simplify analysis.
+- **Analyzing Salary Trends:** Compared salaries across job titles and skills to identify high-paying opportunities and understand the factors associated with higher compensation.
+- **Identifying In-Demand Skills:** Analyzed job postings to determine which technical skills employers request most frequently.
+- **Evaluating Skills for Career Development:** Compared skill demand with average salaries to identify potentially valuable skills for aspiring data analysts.
+- **Communicating Data Insights:** Learned to turn SQL query results into meaningful findings that can support career planning and better decision-making.
+
+This project helped me move beyond learning SQL syntax and apply it to practical questions, developing my ability to use data to investigate problems and extract useful insights.
+
+&nbsp;
+
+# CONCLUSION
+
+This project provided a practical overview of the data analyst job market by examining salaries, job requirements, and skill demand using SQL and PostgreSQL.
+
+The analysis highlighted several important findings:
+
+- **SQL is a fundamental skill:** It appeared as the most frequently requested skill in the dataset, emphasizing the importance of database querying in data analytics.
+- **Excel and Python are valuable additions:** Both appeared among the most in-demand skills, demonstrating the importance of combining data manipulation with programming and automation.
+- **Specialized technical skills can offer higher salaries:** Some skills were associated with higher average salaries, although these results can be influenced by a small number of job postings and unusually high salaries.
+- **Demand and salary should be considered together:** The most useful skills to prioritize are not necessarily those with the highest average salaries, but those that combine meaningful employer demand with competitive compensation.
+
+Overall, this project strengthened my SQL and analytical skills while helping me better understand the skills and opportunities in the data analyst job market. It also reinforced the importance of validating results, considering outliers, and interpreting data in context before drawing conclusions.
+
+**Next Steps:** Continue developing my data analysis portfolio by applying these skills to new datasets and expanding my knowledge of Excel and Power BI to build more comprehensive analyses and interactive dashboards.
