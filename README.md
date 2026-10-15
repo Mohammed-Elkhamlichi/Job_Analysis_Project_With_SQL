@@ -78,6 +78,7 @@ LIMIT
 !['Top 10 Paying Data Analyst Jobs'](./images/1_top_paying_jobs.png)
 
 > [!NOTE]
+>
 > Massive Outlier at the Peak:
 >
 > Mantys leads the ranking significantly at $650,000 for a standard "Data Analyst" title. In job market datasets, exceptionally high single-posting salaries for early or mid-tier titles can represent executive equity packages, high-end consulting contracts, or unique compensation reporting structures.
@@ -145,14 +146,12 @@ ORDER BY
 
 ![Skills Required for Top-Paying Jobs](./images/2_top_paying_job_skills.png)
 
-```txt
-
-SQL & Python Rule the Top Tier: While Excel is great for general entry-level work, reaching six-figure executive and principal roles heavily depends on mastering SQL (80%) and Python (70%).
-
-Modern Cloud & BI Integration: Top-paying positions increasingly look for candidates familiar with cloud data warehouses like Snowflake, cloud platforms like Azure, and enterprise visualization suites like Tableau.
-the result
-
-```
+> [!NOTE]
+>
+> SQL & Python Rule the Top Tier: While Excel is great for general entry-level work, reaching six-figure executive and principal roles heavily depends on mastering SQL (80%) and Python (70%).
+>
+> Modern Cloud & BI Integration: Top-paying positions increasingly look for candidates familiar with cloud data warehouses like Snowflake, cloud platforms like Azure, and enterprise visualization suites like Tableau.
+> the result
 
 #### **3. Most In-Demand Skills:** Identify the skills most frequently requested by employers in data analyst job postings.
 
@@ -187,21 +186,19 @@ LIMIT
 
 ![`Top 5 In-Demand Skills`](./images/3_top_demanded_skills.png)
 
-```txt
-
-SQL Rules the Job Market:
-
-With 92,628 job postings, SQL is significantly ahead of all other skills. This emphasizes that database querying and data retrieval are core prerequisites for any professional entering the data analyst job market.
-
-Traditional Tools vs. Programming:
-
-Excel still holds a commanding second place (67,031 postings), proving that spreadsheets are far from obsolete in daily business tasks. However, programming languages like Python (57,326) are closing the gap as organizations demand deeper automation and scalable data processing.
-
-Visualization Battle (Tableau vs. Power BI):
-
-Both major dashboarding tools appear prominently in the top 5, with Tableau leading slightly in volume within this dataset, demonstrating that communicating insights visually to stakeholders is just as crucial as extracting the data.
-
-```
+> [!NOTE]
+>
+> SQL Rules the Job Market:
+>
+> With 92,628 job postings, SQL is significantly ahead of all other skills. This emphasizes that database querying and data retrieval are core prerequisites for any professional entering the data analyst job market.
+>
+> Traditional Tools vs. Programming:
+>
+> Excel still holds a commanding second place (67,031 postings), proving that spreadsheets are far from obsolete in daily business tasks. However, programming languages like Python (57,326) are closing the gap as organizations demand deeper automation and scalable data processing.
+>
+> Visualization Battle (Tableau vs. Power BI):
+>
+> Both major dashboarding tools appear prominently in the top 5, with Tableau leading slightly in volume within this dataset, demonstrating that communicating insights visually to stakeholders is just as crucial as extracting the data.
 
 #### **4. Skills Associated with Higher Salaries:** Explore the relationship between specific skills and average data analyst salaries.
 
@@ -238,21 +235,21 @@ LIMIT
 
 ![Top 10 Paying Skills](./images/4_top_paying_skills.png)
 
-```txt
+> [!NOTE]
+>
+> The SVN Outlier:
+>
+> SVN ($400,000) leads the list by a massive margin. In salary queries without a minimum job-count filter (HAVING COUNT), older or specialized legacy tools with very few job postings can heavily skew the average if tied to senior or executive-level positions.
+>
+> Premium on Engineering & Specialized Tech:
+>
+> Unlike basic reporting tools, the skills driving the highest salaries in this dataset blend data analytics with software engineering, blockchain (Solidity), and artificial intelligence (DataRobot, MXNet), showing that technical specialization significantly increases earning potential.
+>
+> Cloud and DevOps Integration:
+>
+> Tools like Golang, Terraform, and VMware consistently hover between $146k and $155k, highlighting that modern data analysts who understand cloud infrastructure and pipeline automation are highly valued by employers.
 
-The SVN Outlier:
-
-SVN ($400,000) leads the list by a massive margin. In salary queries without a minimum job-count filter (HAVING COUNT), older or specialized legacy tools with very few job postings can heavily skew the average if tied to senior or executive-level positions.
-
-Premium on Engineering & Specialized Tech:
-
-Unlike basic reporting tools, the skills driving the highest salaries in this dataset blend data analytics with software engineering, blockchain (Solidity), and artificial intelligence (DataRobot, MXNet), showing that technical specialization significantly increases earning potential.
-
-Cloud and DevOps Integration:
-
-Tools like Golang, Terraform, and VMware consistently hover between $146k and $155k, highlighting that modern data analysts who understand cloud infrastructure and pipeline automation are highly valued by employers.
-
-```
+````
 
 #### **5. Optimal Skills to Learn:** Identify skills that combine strong employer demand with competitive salaries.
 
@@ -286,7 +283,7 @@ ORDER BY
     skills_demand DESC
 LIMIT
     10;
-```
+````
 
 ### **THE RESULT**
 
@@ -294,13 +291,11 @@ LIMIT
 
 ![Top 10 Optimal Skills](./images/5_optimal_skills.png)
 
-```txt
-
-The Ideal Tech Stack: Pairing SQL + Python + Tableau creates a highly competitive profile for remote data analysts, combining high job opening volume with average salaries exceeding $99k–$101k.
-
-High-Yield Specialization: Learning Looker ($103,795) alongside Python provides the highest earning potential while maintaining strong remote employability.
-
-```
+> [!NOTE]
+>
+> The Ideal Tech Stack: Pairing SQL + Python + Tableau creates a highly competitive profile for remote data analysts, combining high job opening volume with average salaries exceeding $99k–$101k.
+>
+> High-Yield Specialization: Learning Looker ($103,795) alongside Python provides the highest earning potential while maintaining strong remote employability.
 
 ### Tools & Techniques
 
