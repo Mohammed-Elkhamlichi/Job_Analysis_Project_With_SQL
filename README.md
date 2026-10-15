@@ -77,7 +77,7 @@ LIMIT
 
 !['Top 10 Paying Data Analyst Jobs'](./images/1_top_paying_jobs.png)
 
-```txt
+```
 
 Massive Outlier at the Peak:
 
