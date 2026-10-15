@@ -21,7 +21,7 @@ HAVING
 ORDER BY
     salary_year_avg DESC
 LIMIT
--- display only 25 locations
+-- display only 10 locations
     10;
 
 /*
