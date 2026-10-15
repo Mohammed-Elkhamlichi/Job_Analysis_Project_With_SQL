@@ -277,10 +277,10 @@ LIMIT
 
 ```SQL
 SELECT
+    skills.skills,
     skills.skill_id,
     ROUND(AVG(j.salary_year_avg), 0) as avg_salary,
-    COUNT(skills_job_dim.job_id) as skills_demand,
-    skills.skills
+    COUNT(skills_job_dim.job_id) as skills_demand
 FROM
     job_postings_fact as j
     -- inner join between the job_postings_fact and skills_job_dim table using the job_id
@@ -313,9 +313,11 @@ LIMIT
 
 > [!NOTE]
 >
-> The Ideal Tech Stack: Pairing SQL + Python + Tableau creates a highly competitive profile for remote data analysts, combining high job opening volume with average salaries exceeding $99k–$101k.
+> The analysis of remote Data Analyst job postings with reported annual salaries revealed that **SQL was the most frequently requested skill**, appearing in 398 qualifying job–skill associations, followed by Excel (256), Python (236), and Tableau (230).
 >
-> High-Yield Specialization: Learning Looker ($103,795) alongside Python provides the highest earning potential while maintaining strong remote employability.
+> Python combined substantial demand with a high average annual salary of $101,397. Looker recorded the highest average salary among the displayed results at $103,795, although its demand was considerably lower, at 49 associations. Excel had strong demand but a lower average salary of $87,288.
+>
+> These findings suggest that **SQL is a strong foundational skill**, while Python and business intelligence tools can complement it. However, salary averages should be interpreted alongside the number of qualifying job postings, and the results represent associations within this dataset rather than guaranteed salaries or future job opportunities.
 
 ## &nbsp;
 

@@ -5,50 +5,30 @@ Answer: What are the most optimal skills to learn (aka it’s in high demand and
 - Why? Targets skills that offer job security (high demand) and financial benefits (high salaries), 
 offering strategic insights for career development in data analysis
  */
-WITH
-    skills_in_demand AS (
-        SELECT
-            skills.skill_id,
-            skills.skills,
-            COUNT(DISTINCT j.job_id) AS skills_demand
-        FROM
-            job_postings_fact AS j
-            INNER JOIN skills_job_dim AS sj ON j.job_id = sj.job_id
-            INNER JOIN skills_dim AS skills ON sj.skill_id = skills.skill_id
-        WHERE
-            j.job_title_short = 'Data Analyst'
-            AND j.job_work_from_home IS TRUE
-            AND j.salary_year_avg IS NOT NULL
-        GROUP BY
-            skills.skill_id,
-            skills.skills
-    ),
-    highest_paying_skills AS (
-        SELECT
-            skills.skill_id,
-            skills.skills,
-            ROUND(AVG(j.salary_year_avg), 0) AS avg_salary
-        FROM
-            job_postings_fact AS j
-            INNER JOIN skills_job_dim AS sj ON j.job_id = sj.job_id
-            INNER JOIN skills_dim AS skills ON sj.skill_id = skills.skill_id
-        WHERE
-            j.job_title_short = 'Data Analyst'
-            AND j.job_work_from_home IS TRUE
-            AND j.salary_year_avg IS NOT NULL
-        GROUP BY
-            skills.skill_id,
-            skills.skills
-    )
 SELECT
-    d.skills,
-    d.skills_demand,
-    p.avg_salary
+    skills.skills,
+    skills.skill_id,
+    ROUND(AVG(j.salary_year_avg), 0) as avg_salary,
+    COUNT(skills_job_dim.job_id) as skills_demand
 FROM
-    skills_in_demand AS d
-    INNER JOIN highest_paying_skills AS p ON d.skill_id = p.skill_id
+    job_postings_fact as j
+    -- inner join between the job_postings_fact and skills_job_dim table using the job_id
+    INNER JOIN skills_job_dim ON j.job_id = skills_job_dim.job_id
+    -- inner join between the skills_job_dim and skills_dim table using the job_id
+    INNER JOIN skills_dim as skills ON skills.skill_id = skills_job_dim.skill_id
+WHERE
+    -- Data Analyst roles
+    j.job_title_short = 'Data Analyst'
+    -- salary NOT NULL
+    AND j.salary_year_avg IS NOT NULL
+    -- work from home job
+    and j.job_work_from_home IS TRUE
+GROUP BY
+    skills.skill_id
+HAVING
+    COUNT(skills_job_dim.job_id) > 10
 ORDER BY
-    d.skills_demand DESC,
-    p.avg_salary DESC
+    -- avg_salary DESC,
+    skills_demand DESC
 LIMIT
     10;
