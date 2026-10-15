@@ -203,7 +203,7 @@ LIMIT
 
 ![`Top 5 In-Demand Skills`](./images/3_top_demanded_skills.png)
 
-> **[!NOTE]**
+> [!NOTE]
 >
 > **SQL Rules the Job Market:**
 >
@@ -360,7 +360,7 @@ LIMIT
 
 ![Top 10 Optimal Skills](./images/6_data_analyst_salaries_by_location.png)
 
-> **[!NOTE]**
+> [!NOTE]
 >
 > **Mountain View**, **California**, had the highest average annual salary among the top 10 results, at $147,090 across 35 job postings. **San Jose** and **San Francisco** followed at $132,619 and $130,698, respectively.
 >
