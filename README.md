@@ -37,7 +37,7 @@ This project uses SQL to explore the data analyst job market and answer key ques
 
 ### Questions Explored
 
-#### **1. Top-Paying Data Analyst Jobs:** Identify the highest-paying data analyst positions, focusing on full-time, remote opportunities with disclosed salaries.
+### **1. Top-Paying Data Analyst Jobs:** Identify the highest-paying data analyst positions, focusing on full-time, remote opportunities with disclosed salaries.
 
 ### **SQL QUERY**
 
@@ -91,7 +91,7 @@ LIMIT
 >
 > Major industry players like Meta, AT&T, and Pinterest offer fully remote positions ("Anywhere") with salaries comfortably exceeding $230k, proving that remote workers can secure top-tier tech compensation without traditional office constraints.
 
-#### **2. Skills Required for Top-Paying Jobs:** Analyze the skills associated with the highest-paying data analyst positions.
+### **2. Skills Required for Top-Paying Jobs:** Analyze the skills associated with the highest-paying data analyst positions.
 
 ### **SQL QUERY**
 
@@ -153,7 +153,7 @@ ORDER BY
 > Modern Cloud & BI Integration: Top-paying positions increasingly look for candidates familiar with cloud data warehouses like Snowflake, cloud platforms like Azure, and enterprise visualization suites like Tableau.
 > the result
 
-#### **3. Most In-Demand Skills:** Identify the skills most frequently requested by employers in data analyst job postings.
+### **3. Most In-Demand Skills:** Identify the skills most frequently requested by employers in data analyst job postings.
 
 ### **SQL QUERY**
 
@@ -200,7 +200,7 @@ LIMIT
 >
 > Both major dashboarding tools appear prominently in the top 5, with Tableau leading slightly in volume within this dataset, demonstrating that communicating insights visually to stakeholders is just as crucial as extracting the data.
 
-#### **4. Skills Associated with Higher Salaries:** Explore the relationship between specific skills and average data analyst salaries.
+### **4. Skills Associated with Higher Salaries:** Explore the relationship between specific skills and average data analyst salaries.
 
 ### **SQL QUERY**
 
@@ -249,9 +249,7 @@ LIMIT
 >
 > Tools like Golang, Terraform, and VMware consistently hover between $146k and $155k, highlighting that modern data analysts who understand cloud infrastructure and pipeline automation are highly valued by employers.
 
-````
-
-#### **5. Optimal Skills to Learn:** Identify skills that combine strong employer demand with competitive salaries.
+### **5. Optimal Skills to Learn:** Identify skills that combine strong employer demand with competitive salaries.
 
 ### **SQL QUERY**
 
@@ -283,7 +281,7 @@ ORDER BY
     skills_demand DESC
 LIMIT
     10;
-````
+```
 
 ### **THE RESULT**
 
