@@ -37,7 +37,11 @@ This project uses SQL to explore the data analyst job market and answer key ques
 
 ### Questions Explored
 
+&nbsp;
+
 ### **1. Top-Paying Data Analyst Jobs:** Identify the highest-paying data analyst positions, focusing on full-time, remote opportunities with disclosed salaries.
+
+&nbsp;
 
 ### **SQL QUERY**
 
@@ -71,6 +75,8 @@ LIMIT
     10;
 ```
 
+&nbsp;
+
 ### **THE RESULT**
 
 ### [`Top 10 Paying Data Analyst Jobs JSON DATA`](./JSON/1_top_paying_jobs.json)
@@ -90,6 +96,8 @@ LIMIT
 > Remote Flexibility at Elite Companies:
 >
 > Major industry players like Meta, AT&T, and Pinterest offer fully remote positions ("Anywhere") with salaries comfortably exceeding $230k, proving that remote workers can secure top-tier tech compensation without traditional office constraints.
+
+&nbsp;
 
 ### **2. Skills Required for Top-Paying Jobs:** Analyze the skills associated with the highest-paying data analyst positions.
 
@@ -153,6 +161,8 @@ ORDER BY
 > Modern Cloud & BI Integration: Top-paying positions increasingly look for candidates familiar with cloud data warehouses like Snowflake, cloud platforms like Azure, and enterprise visualization suites like Tableau.
 > the result
 
+&nbsp;
+
 ### **3. Most In-Demand Skills:** Identify the skills most frequently requested by employers in data analyst job postings.
 
 ### **SQL QUERY**
@@ -199,6 +209,8 @@ LIMIT
 > Visualization Battle (Tableau vs. Power BI):
 >
 > Both major dashboarding tools appear prominently in the top 5, with Tableau leading slightly in volume within this dataset, demonstrating that communicating insights visually to stakeholders is just as crucial as extracting the data.
+
+&nbsp;
 
 ### **4. Skills Associated with Higher Salaries:** Explore the relationship between specific skills and average data analyst salaries.
 
@@ -249,6 +261,8 @@ LIMIT
 >
 > Tools like Golang, Terraform, and VMware consistently hover between $146k and $155k, highlighting that modern data analysts who understand cloud infrastructure and pipeline automation are highly valued by employers.
 
+&nbsp;
+
 ### **5. Optimal Skills to Learn:** Identify skills that combine strong employer demand with competitive salaries.
 
 ### **SQL QUERY**
@@ -294,6 +308,8 @@ LIMIT
 > The Ideal Tech Stack: Pairing SQL + Python + Tableau creates a highly competitive profile for remote data analysts, combining high job opening volume with average salaries exceeding $99k–$101k.
 >
 > High-Yield Specialization: Learning Looker ($103,795) alongside Python provides the highest earning potential while maintaining strong remote employability.
+
+&nbsp;
 
 ### Tools & Techniques
 
