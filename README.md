@@ -6,21 +6,29 @@ Explore the data analyst job market through SQL! This project focuses on identif
 
 🔍 **SQL queries:** Explore the analysis in the [`Job_Analysis_Project_With_SQL`](./SQL/) folder.
 
+&nbsp;
+
 ## Background
 
 As an aspiring Data Analyst, I created this project to better understand the job market and identify the skills and opportunities that matter most for building a successful career in data analytics. The goal is to use SQL to answer real-world questions about salaries, job demand, and the skills employers value most.
+
+&nbsp;
 
 ## Data Source
 
 The dataset comes from the [SQL Course by Luke Barousse](https://lukebarousse.com/sql). It contains job-market information, including job titles, salaries, locations, and required skills, providing a foundation for exploring trends and uncovering actionable insights.
 
-### The questions I wanted to answer through my SQL queries were:
+&nbsp;
+
+## The questions I wanted to answer through my SQL queries were:
 
 1. What are the top-paying data analyst jobs?
 2. What skills are required for these top-paying jobs?
 3. What skills are most in demand for data analysts?
 4. Which skills are associated with higher salaries?
 5. What are the most optimal skills to learn?
+
+&nbsp;
 
 # TOOLS I USED
 
@@ -30,6 +38,8 @@ For my deep dive into the data analyst job market, I harnessed the power of seve
 - **PostgreSQL:** The chosen database management system, ideal for handling the job posting data.
 - **Visual Studio Code:** My go-to for database management and executing SQL queries.
 - **Git & GitHub:** Essential for version control and sharing my SQL scripts and analysis, ensuring collaboration and project tracking.
+
+    &nbsp;
 
 # THE ANALYSIS
 
@@ -74,8 +84,6 @@ ORDER BY
 LIMIT
     10;
 ```
-
-&nbsp;
 
 ### **THE RESULT**
 
