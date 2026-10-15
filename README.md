@@ -53,7 +53,7 @@ This project uses SQL to explore the data analyst job market and answer key ques
 
 &nbsp;
 
-### **SQL QUERY**
+### [`SQL`](./SQL/1_top_paying_jobs.sql)
 
 ```sql
 SELECT
@@ -89,8 +89,6 @@ LIMIT
 
 ### [`JSON File`](./JSON/1_top_paying_jobs.json)
 
-### [`SQL File`](./SQL/1_top_paying_jobs.sql)
-
 !['Top 10 Paying Data Analyst Jobs'](./images/1_top_paying_jobs.png)
 
 > [!NOTE]
@@ -111,7 +109,7 @@ LIMIT
 
 ### **2. Skills Required for Top-Paying Jobs:** Analyze the skills associated with the highest-paying data analyst positions.
 
-### **SQL QUERY**
+### [`SQL`](./SQL/2_top_paying_job_skills.sql)
 
 ```SQL
 WITH
@@ -162,8 +160,6 @@ ORDER BY
 
 ### [`JSON File`](./JSON/2_top_paying_job_skills.json)
 
-### [`SQL File`](./SQL/2_top_paying_job_skills.sql)
-
 ![Skills Required for Top-Paying Jobs](./images/2_top_paying_job_skills.png)
 
 > [!NOTE]
@@ -177,7 +173,7 @@ ORDER BY
 
 ### **3. Most In-Demand Skills:** Identify the skills most frequently requested by employers in data analyst job postings.
 
-### **SQL QUERY**
+### [`SQL`](./SQL/3_top_demanded_skills.sql)
 
 ```SQL
 SELECT
@@ -206,8 +202,6 @@ LIMIT
 
 ### [`JSON File`](./JSON/3_top_demanded_skills.json)
 
-### [`SQL File`](./SQL/3_top_demanded_skills.sql)
-
 ![`Top 5 In-Demand Skills`](./images/3_top_demanded_skills.png)
 
 > **[!NOTE]**
@@ -228,7 +222,7 @@ LIMIT
 
 ### **4. Skills Associated with Higher Salaries:** Explore the relationship between specific skills and average data analyst salaries.
 
-### **SQL QUERY**
+### [SQL](./SQL/4_top_paying_skills.sql)
 
 ```SQL
 SELECT
@@ -261,8 +255,6 @@ LIMIT
 
 ### [JSON File](./JSON/4_top_paying_skills.json)
 
-### [SQL File](./SQL/4_top_paying_skills.sql)
-
 ![Top 10 Paying Skills](./images/4_top_paying_skills.png)
 
 > [!NOTE]
@@ -283,7 +275,7 @@ LIMIT
 
 ### **5. Optimal Skills to Learn:** Identify skills that combine strong employer demand with competitive salaries.
 
-### **SQL QUERY**
+### [`SQL`](./SQL/5_optimal_skills.sql)
 
 ```SQL
 SELECT
@@ -318,8 +310,6 @@ LIMIT
 ### **THE RESULT**
 
 ### [`JSON File`](./JSON/5_optimal_skills.json)
-
-### [`SQL File`](./SQL/5_optimal_skills.sql)
 
 ![Top 10 Optimal Skills](./images/5_optimal_skills.png)
 
