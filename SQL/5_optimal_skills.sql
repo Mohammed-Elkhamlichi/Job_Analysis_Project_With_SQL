@@ -26,6 +26,7 @@ WHERE
 GROUP BY
     skills.skill_id
 HAVING
+    -- skills in-demand greater than 10
     COUNT(skills_job_dim.job_id) > 10
 ORDER BY
     -- avg_salary DESC,
