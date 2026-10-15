@@ -77,7 +77,7 @@ LIMIT
 
 !['Top 10 Paying Data Analyst Jobs'](./images/1_top_paying_jobs.png)
 
-> [!ANALYSIS]
+> [!NOTE]
 > Massive Outlier at the Peak:
 >
 > Mantys leads the ranking significantly at $650,000 for a standard "Data Analyst" title. In job market datasets, exceptionally high single-posting salaries for early or mid-tier titles can represent executive equity packages, high-end consulting contracts, or unique compensation reporting structures.
