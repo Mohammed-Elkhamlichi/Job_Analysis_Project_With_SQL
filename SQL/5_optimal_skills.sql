@@ -8,14 +8,14 @@ offering strategic insights for career development in data analysis
 SELECT
     skills.skills,
     skills.skill_id,
-    ROUND(AVG(j.salary_year_avg), 0) as avg_salary,
-    COUNT(skills_job_dim.job_id) as skills_demand
+    ROUND(AVG(j.salary_year_avg), 0) AS avg_salary,
+    COUNT(skills_job_dim.job_id) AS skills_demand
 FROM
-    job_postings_fact as j
+    job_postings_fact AS j
     -- inner join between the job_postings_fact and skills_job_dim table using the job_id
     INNER JOIN skills_job_dim ON j.job_id = skills_job_dim.job_id
     -- inner join between the skills_job_dim and skills_dim table using the job_id
-    INNER JOIN skills_dim as skills ON skills.skill_id = skills_job_dim.skill_id
+    INNER JOIN skills_dim AS skills ON skills.skill_id = skills_job_dim.skill_id
 WHERE
     -- Data Analyst roles
     j.job_title_short = 'Data Analyst'

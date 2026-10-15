@@ -12,8 +12,8 @@ WITH
             job_title,
             job_schedule_type,
             job_location,
-            ROUND(salary_year_avg, 0) as salary_year_avg,
-            companies.name as company_name
+            ROUND(salary_year_avg, 0) AS salary_year_avg,
+            companies.name AS company_name
         FROM
             job_postings_fact AS jobs
             -- left join with the company_dim table using the company_id

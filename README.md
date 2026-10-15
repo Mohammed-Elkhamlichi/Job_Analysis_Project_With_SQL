@@ -62,8 +62,8 @@ SELECT
     job_schedule_type,
     job_location,
     job_posted_date::DATE,
-    ROUND(salary_year_avg, 0) as salary_year_avg,
-    companies.name as company_name
+    ROUND(salary_year_avg, 0) AS salary_year_avg,
+    companies.name AS company_name
 FROM
     job_postings_fact AS jobs
     -- left join with the company_dim table using the company_id
@@ -119,8 +119,8 @@ WITH
             job_title,
             job_schedule_type,
             job_location,
-            ROUND(salary_year_avg, 0) as salary_year_avg,
-            companies.name as company_name
+            ROUND(salary_year_avg, 0) AS salary_year_avg,
+            companies.name AS company_name
         FROM
             job_postings_fact AS jobs
             -- left join with the company_dim table using the company_id
@@ -178,7 +178,7 @@ ORDER BY
 ```SQL
 SELECT
     skills.skills,
-    count(skills_job_dim.job_id) AS skill_demand
+    COUNT(skills_job_dim.job_id) AS skill_demand
 FROM
     job_postings_fact AS j
     -- Inner join between skills_job_dim and job_postings_fact table using the job_id
@@ -189,7 +189,6 @@ WHERE
     j.job_title_short = 'Data Analyst'
     -- AND job_location LIKE '%Anywhere%'
     -- AND job_posted_date BETWEEN '2023-01-01' AND '2023-09-30'
-    -- j.job_title_short = 'Data Enginner'
 GROUP BY
     skills
 ORDER BY
@@ -227,15 +226,15 @@ LIMIT
 ```SQL
 SELECT
     -- the averege salary
-    ROUND(AVG(j.salary_year_avg), 0) as avg_salary,
+    ROUND(AVG(j.salary_year_avg), 0) AS avg_salary,
     -- skills
     skills.skills
 FROM
-    job_postings_fact as j
+    job_postings_fact AS j
     -- inner join between the job_postings_fact and skills_job_dim table using the job_id
     INNER JOIN skills_job_dim ON j.job_id = skills_job_dim.job_id
     -- inner join between the skills_job_dim and skills_dim table using the job_id
-    INNER JOIN skills_dim as skills ON skills.skill_id = skills_job_dim.skill_id
+    INNER JOIN skills_dim AS skills ON skills.skill_id = skills_job_dim.skill_id
 WHERE
     -- data analyst roles
     job_title_short = 'Data Analyst'
@@ -281,14 +280,14 @@ LIMIT
 SELECT
     skills.skills,
     skills.skill_id,
-    ROUND(AVG(j.salary_year_avg), 0) as avg_salary,
-    COUNT(skills_job_dim.job_id) as skills_demand
+    ROUND(AVG(j.salary_year_avg), 0) AS avg_salary,
+    COUNT(skills_job_dim.job_id) AS skills_demand
 FROM
-    job_postings_fact as j
+    job_postings_fact AS j
     -- inner join between the job_postings_fact and skills_job_dim table using the job_id
     INNER JOIN skills_job_dim ON j.job_id = skills_job_dim.job_id
     -- inner join between the skills_job_dim and skills_dim table using the job_id
-    INNER JOIN skills_dim as skills ON skills.skill_id = skills_job_dim.skill_id
+    INNER JOIN skills_dim AS skills ON skills.skill_id = skills_job_dim.skill_id
 WHERE
     -- Data Analyst roles
     j.job_title_short = 'Data Analyst'
