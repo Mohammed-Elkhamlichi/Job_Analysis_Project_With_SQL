@@ -322,6 +322,54 @@ LIMIT
 
 ## &nbsp;
 
+### **6. Data Analyst Salaries by Location:** Identify locations offering high average salaries and strong job opportunities.
+
+### [`SQL`](./SQL/6_data_analyst_salaries_by_location.sql)
+
+```SQL
+SELECT
+    job_location,
+    -- count how many job postings for each avg yearly salary
+    COUNT(job_id) AS job_count,
+    -- the avg salary
+    ROUND(AVG(salary_year_avg), 0) AS salary_year_avg
+FROM
+    job_postings_fact
+WHERE
+    -- Data Analyst jobs
+    job_title_short = 'Data Analyst'
+    -- ignore NULL Salaries
+    AND salary_year_avg IS NOT NULL
+    -- ignore NULL locations
+    AND job_location IS NOT NULL
+GROUP BY
+    job_location
+HAVING
+    -- locations having more then 30 job postings
+    COUNT(job_id) > 30
+ORDER BY
+    salary_year_avg DESC
+LIMIT
+-- display only 25 locations
+    10;
+```
+
+### **THE RESULT**
+
+### [`JSON File`](./JSON/6_data_analyst_salaries_by_location.json)
+
+![Top 10 Optimal Skills](./images/6_data_analyst_salaries_by_location.png)
+
+> **[!NOTE]**
+>
+> **Mountain View**, **California**, had the highest average annual salary among the top 10 results, at $147,090 across 35 job postings. **San Jose** and **San Francisco** followed at $132,619 and $130,698, respectively.
+>
+> **New York** had the largest number of postings among the listed city-level locations, with 404 postings and an average annual salary of $104,422.
+>
+> **Conclusion:** The results show that average advertised salaries and job-posting volumes vary by location. These findings describe the available dataset and should not be interpreted as guaranteed salaries or proof that location causes higher compensation.
+
+## &nbsp;
+
 ### Tools & Techniques
 
 - **SQL (PostgreSQL):** Data querying, filtering, aggregation, and analysis.
