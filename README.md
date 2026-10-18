@@ -53,7 +53,7 @@ This project uses SQL to explore the data analyst job market and answer key ques
 
 &nbsp;
 
-### [`SQL`](./SQL/1_top_paying_jobs.sql)
+### [`SQL File`](./SQL/1_top_paying_jobs.sql)
 
 ```sql
 SELECT
@@ -109,7 +109,7 @@ LIMIT
 
 ### **2. Skills Required for Top-Paying Jobs:** Analyze the skills associated with the highest-paying data analyst positions.
 
-### [`SQL`](./SQL/2_top_paying_job_skills.sql)
+### [`SQL File`](./SQL/2_top_paying_job_skills.sql)
 
 ```SQL
 WITH
@@ -173,7 +173,7 @@ ORDER BY
 
 ### **3. Most In-Demand Skills:** Identify the skills most frequently requested by employers in data analyst job postings.
 
-### [`SQL`](./SQL/3_top_demanded_skills.sql)
+### [`SQL File`](./SQL/3_top_demanded_skills.sql)
 
 ```SQL
 SELECT
@@ -274,7 +274,7 @@ LIMIT
 
 ### **5. Optimal Skills to Learn:** Identify skills that combine strong employer demand with competitive salaries.
 
-### [`SQL`](./SQL/5_optimal_skills.sql)
+### [`SQL File`](./SQL/5_optimal_skills.sql)
 
 ```SQL
 SELECT
@@ -324,7 +324,7 @@ LIMIT
 
 ### **6. Data Analyst Salaries by Location:** Identify locations offering high average salaries and strong job opportunities.
 
-### [`SQL`](./SQL/6_data_analyst_salaries_by_location.sql)
+### [`SQL File`](./SQL/6_data_analyst_salaries_by_location.sql)
 
 ```SQL
 SELECT
